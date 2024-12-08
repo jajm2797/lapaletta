@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>La Paletta Margariteña</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">La Paletta Margariteña</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="#" class="active">Propuesta de Valor</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Propuesta de Valor</h1>
+							<span class="image fit"><img src="assets/css/images/wall2.jpg" alt="" /></span>
+							<p>La Paletta Margariteña ofrece una experiencia única en helados artesanales, combinando más de 60 sabores innovadores que cautivan tanto a niños como a adultos. Con un enfoque en la calidad y creatividad, sus productos no solo destacan por su sabor, sino también por su capacidad de adaptarse a los gustos locales, utilizando ingredientes frescos y métodos artesanales en la Isla de Margarita.</p>
+							<p>Además, la marca se posiciona como un referente de alegría y tradición, expandiendo su alcance a nivel nacional e internacional gracias a su compromiso con la excelencia y el servicio al cliente.</p>
+							<ul>
+								<li><strong>Experiencia única:</strong> La Paletta Margariteña ofrece una experiencia sensorial única a través de una variedad de sabores artesanales, hechos con ingredientes locales y de alta calidad, que despiertan el paladar y evocan la alegría.</li>
+								<li><strong>Conexión emocional:</strong> Más que un simple helado, La Paletta Margariteña se posiciona como un símbolo de felicidad, nostalgia y celebración. Al consumirla, los clientes se conectan con momentos especiales y recuerdos.</li>
+								<li><strong>Producto artesanal y natural:</strong> La Paletta Margariteña se destaca por ser un producto artesanal, elaborado con ingredientes naturales y sin conservantes, lo que garantiza un sabor auténtico y saludable.</li>
+								<li><strong>Variedad y personalización:</strong> Con más de 40 sabores disponibles, La Paletta Margariteña se adapta a todos los gustos y preferencias, ofreciendo una experiencia personalizada para cada cliente.</li>
+								<li><strong>Apoyo al emprendimiento local:</strong> Al consumir La Paletta Margariteña, los clientes están apoyando un emprendimiento familiar venezolano y contribuyendo al desarrollo económico local.</li>
+							</ul>
+
+
+							<!-- Botón para mostrar la misión -->
+							<button id="toggleMission" style="margin: 1em auto; display: block;">Misión</button>
+
+							<!-- Párrafo de la misión con clase para el efecto -->
+							<div id="missionText" class="fade" style="display: none;">
+								<p style="font-weight: bold;">
+									Generamos felicidad mediante la elaboración de helados de calidad, 100% artesanales, naturales, sin conservantes, aditivos y estabilizantes artificiales, con una variedad de sabores únicos que satisfacen las necesidades de nuestros clientes, empleados y aliados comerciales. Brindando una experiencia inigualable, en un ambiente agradable y precios accesibles; trabajamos con altos estándares de excelencia, innovación, eficiencia, competitividad y rentabilidad, para obtener un crecimiento perdurable en el tiempo, que nos permite ser parte del progreso de nuestro país.
+								</p>
+							</div>
+
+							<!--AQUI VA EL BOTON QUE MUESTRA LA MISIÓN-->
+							<!-- <p>Generamos felicidad mediante la elaboración de helados de calidad, 100% artesanales, naturales, sin conservantes, aditivos y estabilizantes artificiales, con una variedad de sabores únicos que satisfacen las necesidades de nuestros clientes, empleados y aliados comerciales. Brindando una experiencia inigualable, en un ambiente agradable y precios accesibles; trabajamos con altos estándares de excelencia, innovación, eficiencia, competitividad y rentabilidad, para obtener un crecimiento perdurable en el tiempo, que nos permite ser parte del progreso de nuestro país.</p> -->
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				document.getElementById('toggleMission').addEventListener('click', function () {
+					const missionText = document.getElementById('missionText');
+					const button = this;
+					console.log(missionText.classList)
+					if (missionText.classList.contains('show')) {
+						missionText.classList.remove('show');
+						missionText.classList.add('hide');
+						setTimeout(() => missionText.style.display = 'none', 500); // Espera a que termine el fade-out
+						button.textContent = 'Misión';
+					} else {
+						missionText.style.display = 'block'; // Asegura que se muestre antes del fade-in
+						setTimeout(() => missionText.classList.add('show'), 10); // Añade un pequeño retraso para activar el fade-in
+						button.textContent = 'Ocultar';
+					}
+				});
+			</script>			
+			
+
+	</body>
+</html>
