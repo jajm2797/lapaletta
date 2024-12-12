@@ -3308,6 +3308,14 @@ input, select, textarea {
 			background-color: #953d75;
 		}
 
+		.wrapper.style4 {
+			background-color: #0b876b;
+		}
+
+		.wrapper.style5 {
+			background-color: #cd6c0a;
+		}
+
 		.wrapper.fullscreen {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3995,14 +4003,14 @@ input, select, textarea {
 			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 			z-index: 10; /* Asegura que el texto esté sobre la imagen */
 		}
-		
+
 		.feature-image {
-			width: auto; /* Ajusta el tamaño de las imágenes */
-			height: 400px;
+			width: auto;
+			height: auto;
 			object-fit: cover;
-			margin-bottom: 15px;
 			border: 2px solid #ddd;
-			border-radius: 40px; /* Opcional: bordes redondeados para la imagen */
+			border-radius: 40px;
+			margin-bottom: 15px;
 		}
 		
 		
@@ -4012,6 +4020,8 @@ input, select, textarea {
 			align-items: center;
 			justify-content: center;
 			text-align: center;
+			width: 50%;
+			box-sizing: border-box;			
 			height: 100%; /* Ajusta la altura según sea necesario */
 			margin-bottom: 20px;
 		}
@@ -4020,7 +4030,7 @@ input, select, textarea {
 			max-width: 100%;
 			max-height: 100%;
 			width: auto; /* Se ajusta proporcionalmente al contenedor */
-			height: auto;
+			height: auto; /*Vista PC*/
 			object-fit: cover; /* Recorta la imagen si es necesario */
 			border-radius: 10px; /* Opcional, para esquinas redondeadas */
 		}
@@ -4031,6 +4041,13 @@ input, select, textarea {
 			margin-left: auto;
 			margin-right: auto;
 		}
+
+		@media (max-width: 768px) {
+			.features section {
+				width: 100%; /* Una sección por fila */
+				margin-bottom: 20px;
+			}
+		}
 		
 		@media (max-width: 768px) {
 			.features section {
@@ -4039,25 +4056,8 @@ input, select, textarea {
 		
 			.features section img {
 				width: 100%; /* Se asegura de ocupar todo el ancho disponible en pantallas pequeñas */
-				height: auto;
+				height: auto; /*Vista Movil*/
 			}
-		}
-
-		.features {
-			display: flex;
-			justify-content: center; /* Centra horizontalmente los elementos */
-			flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
-			gap: 20px; /* Espaciado uniforme entre elementos */
-		}
-		
-		.features div {
-			display: flex;
-			flex-direction: column; /* Organiza los elementos verticalmente */
-			align-items: center; /* Centra los elementos horizontalmente */
-			width: 48%; /* Dos columnas por fila en pantallas grandes */
-			margin: 1%; /* Espaciado entre elementos */
-			text-align: center;
-			box-sizing: border-box; /* Incluye padding y border en el ancho */
 		}
 		
 		.features div img {
@@ -4066,9 +4066,8 @@ input, select, textarea {
 			margin-bottom: 10px; /* Espaciado inferior para la imagen */
 		}
 		
-		.features div:last-child {
-			width: 100%; /* Última sección ocupa todo el ancho */
-			margin: 0 auto;
+		.features section:last-child {
+			width: 100%;
 		}
 		
 		/* Ajustes responsive */
