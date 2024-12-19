@@ -6,6 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+			.producto-contenedor {
+				display: flex;
+				align-items: flex-start; /* Alinea al inicio en pantallas grandes */
+				gap: 20px;
+				width: 80%;
+				margin: 20px auto;
+			}
+
+			.producto-contenedor img {
+				max-width: 40%;
+				height: auto;
+				display: block;
+			}
+
+			.producto-texto {
+				flex-grow: 1;
+				text-align: justify;
+			}
+
+			/* Media query para pantallas más pequeñas (ej. móviles) */
+			@media (max-width: 768px) { /* Ajusta el valor 768px según necesites */
+				.producto-contenedor {
+					flex-direction: column; /* Apila la imagen y el texto verticalmente */
+					align-items: center; /* Centra los elementos horizontalmente */
+					text-align: center;
+				}
+
+				.producto-contenedor img {
+					max-width: 80%; /* La imagen ocupa más ancho en móviles */
+					margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+				}
+				.producto-texto{
+					text-align: justify;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -26,13 +63,17 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Persona</h1>
-							<span class="image fit"><img src="assets/css/images/wall2.jpg" alt="" /></span>
-							<p>
-								La marca también proyecta cercanía a través de su historia de emprendimiento
-								liderado por jóvenes venezolanos que buscan conectar con sus raíces. Los
-								consumidores de la paleta con consumidores emocionales, los elementos
-								humanos que influyen en la decisión de compra son:
-							</p>
+							<div class="producto-contenedor">
+								<img src="../assets/css/images/persona.jpeg" alt="Persona">
+								<div class="producto-texto">
+									<p>
+										La marca también proyecta cercanía a través de su historia de emprendimiento
+										liderado por jóvenes venezolanos que buscan conectar con sus raíces. Los
+										consumidores de la paleta con consumidores emocionales, los elementos
+										humanos que influyen en la decisión de compra son:
+									</p>
+								</div>
+							</div>							
 						</div>
 					</section>
 
